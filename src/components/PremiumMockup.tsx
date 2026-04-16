@@ -30,12 +30,12 @@ import {
 } from "recharts";
 
 const trendData = [
-  { name: "Ene", ingresos: 420 },
-  { name: "Feb", ingresos: 510 },
-  { name: "Mar", ingresos: 560 },
-  { name: "Abr", ingresos: 630 },
-  { name: "May", ingresos: 710 },
-  { name: "Jun", ingresos: 790 },
+  { name: "Ene", actividad: 420 },
+  { name: "Feb", actividad: 510 },
+  { name: "Mar", actividad: 560 },
+  { name: "Abr", actividad: 630 },
+  { name: "May", actividad: 710 },
+  { name: "Jun", actividad: 790 },
 ];
 
 const centerData = [
@@ -48,93 +48,94 @@ const centerData = [
 
 const metricCards = [
   {
-    label: "Ingresos integrados",
-    value: "$8.7M",
-    detail: "+12% sobre el periodo anterior",
-  },
-  {
-    label: "Clientes unificados",
+    label: "Usuarios monitoreados",
     value: "128k",
-    detail: "Customer 360 activo en toda la red",
+    detail: "Cobertura activa en toda la operación conectada",
   },
   {
-    label: "Alertas IA",
+    label: "Riesgo de abandono detectado",
+    value: "1,284",
+    detail: "Usuarios priorizados para intervención inmediata",
+  },
+  {
+    label: "Alertas IA activas",
     value: "37",
-    detail: "7 requieren intervención prioritaria",
+    detail: "Señales en tiempo real para retención y seguimiento",
   },
 ];
 
 const commandSignals = [
-  "Caída de frecuencia detectada en Satélite y Del Valle con impacto directo en recurrencia.",
-  "Segmento VIP con oportunidad de ticket incremental en Polanco e Interlomas.",
-  "Nuevos clientes del último mes requieren secuencia de segunda visita en 15 días.",
+  "Caída de actividad detectada en usuarios de alto valor durante los últimos 7 días.",
+  "Segmento premium con reducción progresiva en volumen transaccional.",
+  "Usuarios nuevos sin segunda actividad dentro del periodo esperado.",
 ];
 
 const videoMetrics = [
   { label: "Personas detectadas", value: "1,284" },
-  { label: "Tiempo promedio", value: "12 min" },
-  { label: "Zonas activas", value: "8" },
+  { label: "Tiempo promedio en sitio", value: "12 min" },
+  { label: "Eventos relevantes", value: "8" },
   { label: "Alertas críticas", value: "6" },
 ];
 
 const sidebarItems = [
   "Dashboard ejecutivo",
-  "Customer 360",
+  "Usuarios y scoring",
+  "Riesgo de abandono",
   "Automatizaciones",
-  "Centros y rendimiento",
+  "Rendimiento por centro",
   "Alertas IA",
-  "Conectores DRGT / POS",
+  "Conectores y datos",
   "Configuración",
 ];
 
 const topKpis = [
-  { label: "Clientes activos", value: "42,860" },
-  { label: "Clientes en riesgo", value: "1,284" },
-  { label: "Campañas activas", value: "24" },
+  { label: "Usuarios activos", value: "42,860" },
+  { label: "Usuarios en riesgo", value: "1,284" },
+  { label: "Flujos activos", value: "24" },
   { label: "Retención promedio", value: "82%" },
 ];
 
 const customerMetrics = [
   { label: "Centro principal", value: "Polanco" },
-  { label: "LTV estimado", value: "$24,800" },
-  { label: "Frecuencia", value: "14 visitas / 90 días" },
-  { label: "Riesgo churn", value: "Bajo" },
+  { label: "Valor estimado", value: "$24,800" },
+  { label: "Frecuencia de actividad", value: "14 interacciones / 30 días" },
+  { label: "Riesgo churn", value: "Medio" },
 ];
 
 const automationRows = [
   {
-    title: "Clientes inactivos +60 días",
-    subtitle: "WhatsApp + email con reactivación automática",
+    title: "Usuarios inactivos +7 días",
+    subtitle: "Retención automatizada con prioridad por scoring de riesgo",
     status: "Activo",
   },
   {
-    title: "Nuevos clientes primer mes",
-    subtitle: "Secuencia de segunda visita y seguimiento comercial",
+    title: "Usuarios nuevos sin recurrencia",
+    subtitle: "Secuencia de reactivación temprana con seguimiento comercial",
     status: "Activo",
   },
   {
-    title: "Segmento VIP alto ticket",
-    subtitle: "Oferta premium personalizada con priorización IA",
+    title: "Segmento alto valor en descenso",
+    subtitle: "Intervención priorizada por IA según caída de actividad",
     status: "Optimización",
   },
 ];
 
 const footerBlocks = [
   {
-    eyebrow: "Canal principal",
+    eyebrow: "Canal prioritario",
     title: "WhatsApp",
-    description: "Automatización conectada a comportamiento real, campañas y seguimiento comercial.",
+    description: "Acciones de retención y seguimiento activadas según scoring de riesgo.",
     dark: true,
   },
   {
-    eyebrow: "Documentación",
-    title: "Integración DRGT / POS",
-    description: "Conectores, trazabilidad y lectura operativa listos para implantación enterprise.",
+    eyebrow: "Modelo analítico",
+    title: "Churn + scoring",
+    description: "Identificación de riesgo de salida, caída de actividad y oportunidad de reactivación.",
   },
   {
     eyebrow: "Gobierno",
-    title: "Seguridad y control",
-    description: "Capas de acceso, supervisión multi-centro y operación con criterios de gobierno.",
+    title: "Seguridad y trazabilidad",
+    description: "Control de datos, operación multi-centro y evolución escalable.",
   },
 ];
 
@@ -182,12 +183,14 @@ export default function PremiumMockup() {
               </div>
 
               <h1 className="max-w-[780px] text-[48px] font-semibold leading-[0.96] tracking-[-0.05em] sm:text-[58px] lg:text-[84px]">
-                Una sola capa para gobernar centros, clientes, datos y decisiones.
+                Una sola plataforma para detectar riesgo, activar retención y entender el comportamiento del
+                usuario.
               </h1>
 
               <p className="mt-8 max-w-[660px] text-[19px] leading-9 text-[#d4deea] lg:text-[22px]">
-                Consolidación de DRGT, POS, clientes, campañas y analítica de video en un entorno premium
-                de supervisión ejecutiva y activación comercial.
+                Integración de datos operativos, actividad transaccional, CRM e inteligencia artificial para
+                anticipar abandono, identificar valor y activar acciones sobre usuarios con riesgo de salida
+                o alto potencial.
               </p>
             </div>
 
@@ -237,19 +240,19 @@ export default function PremiumMockup() {
               </div>
             </div>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <div className="rounded-[28px] border border-[#ebe2d6] bg-[#fbf8f3] p-6">
-                <div className="text-sm text-[#6d7a8c]">Clientes en riesgo</div>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <div className="rounded-[28px] border border-[#ebe2d6] bg-[#fbf8f3] p-6">
+                <div className="text-sm text-[#6d7a8c]">Usuarios en riesgo</div>
                 <div className="mt-3 text-[34px] font-semibold tracking-[-0.04em] text-[#24344d]">1,284</div>
                 <div className="mt-4 text-sm leading-7 text-[#6d7a8c]">
-                  Concentración crítica en 3 centros con caída de frecuencia y menor conversión.
+                  Priorización activa por comportamiento transaccional y señales de salida del sistema.
                 </div>
               </div>
               <div className="rounded-[28px] border border-[#ebe2d6] bg-[#f2efe8] p-6">
-                <div className="text-sm text-[#6d7a8c]">Campañas activas</div>
+                <div className="text-sm text-[#6d7a8c]">Flujos de retención activos</div>
                 <div className="mt-3 text-[34px] font-semibold tracking-[-0.04em] text-[#24344d]">24</div>
                 <div className="mt-4 text-sm leading-7 text-[#6d7a8c]">
-                  Flujos sincronizados entre WhatsApp, email y SMS con reglas por segmento.
+                  Automatizaciones sincronizadas para retención, reactivación y seguimiento comercial.
                 </div>
               </div>
             </div>
@@ -271,15 +274,15 @@ export default function PremiumMockup() {
               <div className="mt-4 grid gap-4 md:grid-cols-3">
                 <div className="rounded-[24px] bg-white/8 p-4">
                   <div className="text-sm text-[#bfd0e2]">Data Layer</div>
-                  <div className="mt-2 text-[18px] font-medium">DRGT + POS + clientes + marketing</div>
+                  <div className="mt-2 text-[18px] font-medium">Actividad, usuarios, transacciones y eventos</div>
                 </div>
                 <div className="rounded-[24px] bg-white/8 p-4">
                   <div className="text-sm text-[#bfd0e2]">CRM Layer</div>
-                  <div className="mt-2 text-[18px] font-medium">Segmentación, journeys y seguimiento</div>
+                  <div className="mt-2 text-[18px] font-medium">Seguimiento, segmentación y automatización</div>
                 </div>
                 <div className="rounded-[24px] bg-white/8 p-4">
                   <div className="text-sm text-[#bfd0e2]">IA Layer</div>
-                  <div className="mt-2 text-[18px] font-medium">Churn, LTV, alertas y recomendación</div>
+                  <div className="mt-2 text-[18px] font-medium">Churn, scoring, riesgo y recomendación</div>
                 </div>
               </div>
             </div>
@@ -292,15 +295,15 @@ export default function PremiumMockup() {
               <div>
                 <div className="text-sm text-[#7a8798]">Performance layer</div>
                 <div className="mt-2 text-[34px] font-semibold tracking-[-0.03em] text-[#24344d]">
-                  Tendencia consolidada de negocio
+                  Evolución de actividad y retención
                 </div>
                 <p className="mt-3 max-w-[620px] text-[15px] leading-7 text-[#6c798b]">
-                  Evolución agregada de negocio para lectura directiva con una sola métrica visual,
-                  sin ruido operativo ni controles secundarios.
+                  Lectura integrada de actividad, retención y usuarios recurrentes para toma de decisiones
+                  con prioridad comercial.
                 </p>
               </div>
               <div className="rounded-full border border-[#e4dacb] bg-[#f3ece2] px-4 py-2 text-sm text-[#687688]">
-                Ingresos integrados
+                Actividad + retención
               </div>
             </div>
 
@@ -327,7 +330,7 @@ export default function PremiumMockup() {
                   />
                   <Area
                     type="monotone"
-                    dataKey="ingresos"
+                    dataKey="actividad"
                     stroke="#24344d"
                     fill="url(#fillIngresos)"
                     strokeWidth={3}
@@ -368,8 +371,9 @@ export default function PremiumMockup() {
             <div className="mt-5 rounded-[30px] bg-[#24344d] p-6 text-white">
               <div className="text-sm text-[#bfd0e2]">Valor agregado</div>
               <p className="mt-3 text-[16px] leading-8 text-[#e4ebf3]">
-                La analítica de video alimenta eventos, seguimiento, auditoría operativa y campañas
-                segmentadas dentro del CRM para convertir comportamiento físico en acción comercial.
+                La analítica de video y eventos operativos puede complementar la inteligencia comercial,
+                alimentando señales de comportamiento, trazabilidad de incidencias y reglas de seguimiento
+                dentro del CRM.
               </p>
             </div>
           </div>
@@ -427,7 +431,7 @@ export default function PremiumMockup() {
                 <div className="max-w-[760px]">
                   <div className="text-sm text-[#798596]">Customer operations</div>
                   <div className="mt-2 text-[38px] font-semibold tracking-[-0.04em] text-[#24344d] lg:text-[46px]">
-                    Backend CRM y activación comercial
+                    Backend CRM, scoring y retención
                   </div>
                 </div>
 
@@ -436,11 +440,11 @@ export default function PremiumMockup() {
                     <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#778396]" />
                     <Input
                       className="h-12 w-full rounded-2xl border-[#e2d8c9] bg-[#fffdf9] pl-10 md:w-[280px]"
-                      placeholder="Buscar cliente o centro"
+                      placeholder="Buscar usuario, segmento o centro"
                     />
                   </div>
                   <Button className="h-12 rounded-2xl bg-[#24344d] px-6 text-white hover:bg-[#1f2d42]">
-                    Nueva campaña
+                    Nueva acción de retención
                   </Button>
                 </div>
               </div>
@@ -467,11 +471,11 @@ export default function PremiumMockup() {
                     <div>
                       <div className="text-sm text-[#798596]">Customer 360</div>
                       <div className="mt-2 text-[28px] font-semibold tracking-[-0.03em] text-[#24344d]">
-                        Mariana López
+                        Usuario 20458
                       </div>
                     </div>
                     <span className="rounded-full bg-[#e8eef5] px-4 py-2 text-sm text-[#24344d]">
-                      Segmento VIP
+                      Segmento alto valor
                     </span>
                   </div>
 
@@ -492,12 +496,13 @@ export default function PremiumMockup() {
                   <div className="rounded-[28px] bg-[#24344d] p-5 text-white lg:p-6">
                     <div className="text-sm text-[#bfd0e2]">Recomendación IA</div>
                     <p className="mt-3 text-[16px] leading-8 text-[#e5ecf4]">
-                      Activar una secuencia premium de fidelización con incentivo exclusivo, mensaje por
-                      WhatsApp y seguimiento automático dentro de 72 horas para reducir riesgo de churn.
+                      Disminución progresiva en frecuencia y volumen frente al patrón esperado. Se
+                      recomienda activar una secuencia de retención con contacto prioritario, incentivo
+                      personalizado y seguimiento automático durante las próximas 72 horas.
                     </p>
                     <div className="mt-5 flex flex-wrap gap-3">
                       <Button className="h-11 rounded-2xl bg-[#d8c099] px-5 text-[#24344d] hover:bg-[#cdb184]">
-                        Activar campaña
+                        Activar acción
                       </Button>
                       <Button
                         variant="outline"
@@ -514,7 +519,7 @@ export default function PremiumMockup() {
                     <div>
                       <div className="text-sm text-[#798596]">Rendimiento por centro</div>
                       <div className="mt-2 text-[28px] font-semibold tracking-[-0.03em] text-[#24344d]">
-                        Mapa de prioridad comercial
+                        Mapa de prioridad operativa y comercial
                       </div>
                     </div>
                     <Building2 className="mt-1 h-5 w-5 text-[#768395]" />
